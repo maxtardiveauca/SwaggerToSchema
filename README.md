@@ -1,6 +1,10 @@
 # SwaggerToSchema
 Use your swagger URL or a local file and create to LAC Schema file which can be used to POST and create data models.
 
+Specifically, this will look at the [definitions section](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#definitionsObject) of the Swagger file and generate a corresponding database model, in which each schema object will become a table, and each property will become a column.
+
+Note that this is limited: it will not implement arbitrary Swagger APIs, it will only create a database schema with one table per model.
+
 ##Clone this repository to a directory on your system.
 ```
 git clone https://github.com/tylerm007/SwaggerToSchema.git ~/SwaggerToSchema
